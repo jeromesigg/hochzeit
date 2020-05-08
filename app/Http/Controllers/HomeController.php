@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Story;
+use App\Shedule;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $stories = Story::all()->sortByDesc('year');
+        $shedules = Shedule::all()->sortBy('time');
+        return view('home', compact('stories', 'shedules'));
     }
 }

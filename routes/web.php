@@ -18,3 +18,18 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contacts', 'ContactsController@create');
+Route::post('/contacts', 'ContactsController@store');
+
+
+Route::group(['middleware' => 'admin'], function(){
+
+    Route::get('/admin','AdminController@index');
+    Route::resource('admin/stories', 'AdminStoriesController');
+    Route::resource('admin/shedules', 'AdminShedulesController');
+});
+
+Route::get('admin/run-migrations', function () {
+    return Artisan::call('migrate', ["--force" => true ]);
+});

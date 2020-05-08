@@ -18,10 +18,10 @@
             @yield('content')
         </main>
 
-        @guest
+        {{-- @guest
         @else
             @include('includes.footer')    
-        @endguest
+        @endguest --}}
         
         <!-- ======= Footer ======= -->
   
