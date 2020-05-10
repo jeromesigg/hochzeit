@@ -1,3 +1,20 @@
+function RingSize(x) {
+  if (x.matches) { // If media query matches
+    return 100;
+  } else {
+    return 200;
+  }
+}
+
+function Font(x) {
+  if (x.matches) { // If media query matches
+    return 'bold 40px Helvetica';
+  } else {
+    return 'bold 72px Helvetica';
+  }
+}
+
+var WindowSize = window.matchMedia("(max-width: 700px)")
 var ringer = {
     //countdown_to: "10/31/2014",
     countdown_to: "08/21/2021 14:00",
@@ -15,9 +32,10 @@ var ringer = {
         max: 60
       }
      },
+    
     r_count: 3,
-    r_spacing: 30, // px
-    r_size: 200, // px
+    r_spacing: 15, // px
+    r_size: RingSize(WindowSize), // px
     r_thickness: 5, // px
     update_interval: 60000, // ms
       
@@ -98,7 +116,7 @@ var ringer = {
       $r.ctx.fillText(label, 0, 30);
       $r.ctx.fillText(label, 0, 30);   
       
-      $r.ctx.font = 'bold 72px Helvetica';
+      $r.ctx.font = Font(WindowSize);
       $r.ctx.fillText(Math.floor(value), 0, 10);
       
       $r.ctx.restore();

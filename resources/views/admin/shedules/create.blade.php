@@ -11,11 +11,11 @@
                 {!! Form::open(['method' => 'POST', 'action'=>'AdminShedulesController@store', 'files' => true]) !!}
                 <div class="form-group">
                     {!! Form::label('time', 'Zeit:') !!}
-                    {!! Form::time('time', null, ['class' => 'form-control']) !!}
+                    {!! Form::time('time', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('title', 'Titel:') !!}
-                    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('link', 'Link:') !!}
@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     {!! Form::label('body', 'Beschreibung:') !!}
-                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3]) !!}
+                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3, 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::submit('Ablauf Erstellen', ['class' => 'btn btn-primary'])!!}

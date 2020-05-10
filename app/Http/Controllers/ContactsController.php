@@ -19,11 +19,11 @@ class ContactsController extends Controller {
 
   public function store(Request $request) { 
     $input = $request->all();
-    Mail::send('emails.send',  $input, function($message){
-        $message->to('jerome.sigg@gmail.com', 'Jerome')->subject('Test');
-    });
+    // Mail::send('emails.send',  $input, function($message){
+    //     $message->to('jerome.sigg@gmail.com', 'Jerome')->subject('Test');
+    // });
     Contact::create($input);      
-    return redirect()->to(url()->previous() . "#contact")->with('success', 'Vielen Dank für die Nachricht');
+    return redirect()->back()->with('success', 'Vielen Dank für die Nachricht. Wir werden uns so schnell wie möglich melden.');
 
   }
 }

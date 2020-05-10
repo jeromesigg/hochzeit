@@ -11,19 +11,19 @@
                 {!! Form::open(['method' => 'POST', 'action'=>'AdminStoriesController@store', 'files' => true]) !!}
                 <div class="form-group">
                     {!! Form::label('year', 'Jahr:') !!}
-                    {!! Form::text('year', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('year', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('title', 'Titel:') !!}
-                    {!! Form::text('title', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                         {!! Form::label('photo_id', 'Photo:') !!}
-                        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
+                        {!! Form::file('photo_id', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('body', 'Beschreibung:') !!}
-                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3]) !!}
+                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3, 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::submit('Story Erstellen', ['class' => 'btn btn-primary'])!!}

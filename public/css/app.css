@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/* Timeline */
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/* Timeline */
 
 .timeline {
   position: relative;
@@ -6,9 +8,9 @@
 
 .timeline::before {
   content: "";
-  background: #C5CAE9;
+  background: #3F51B5;
   width: 5px;
-  height: 95%;
+  height: 90%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -71,7 +73,7 @@
 .timeline-img {
   width: 30px;
   height: 30px;
-  background: #3F51B5;
+  background: #303F9F;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -162,13 +164,13 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #f4f9fc;
   flex-direction: column;
 }
 
 .timeline {
   width: 100%;
-  background-color: #fff;
+  background-color: #f4f9fc;
   box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -222,7 +224,7 @@ blockquote {
   font-size: 42px;
   margin-bottom: 50px;
   transform: translate3d(20px, 0, 0);
-  color: #d4a024;
+  color: #3F51B5;
   font-weight: 300;
   opacity: 0;
   transition: 0.2s ease 0.4s;
@@ -290,7 +292,7 @@ blockquote {
   text-align: center;
   opacity: 1;
   background: transparent;
-  color: #d4a024;
+  color: #3F51B5;
   margin: 15px 0 !important;
   position: relative;
 }
@@ -303,13 +305,13 @@ blockquote {
   width: 6px;
   height: 6px;
   border-radius: 100%;
-  background-color: #d4a024;
+  background-color: #3F51B5;
   transform: scale(0);
   transition: 0.2s;
 }
 
 .timeline .swiper-pagination-bullet-active {
-  color: #d4a024;
+  color: #3F51B5;
 }
 
 .timeline .swiper-pagination-bullet-active::before {
@@ -411,6 +413,114 @@ blockquote {
 
   .timeline .swiper-slide-content {
     right: 25%;
+  }
+}
+
+.section.locations .location-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section.locations .location {
+  margin: 1rem auto 2rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  .section.locations .location {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .section.locations .location .location-details {
+    padding-top: 0.5rem;
+    width: calc(100% - 250px);
+  }
+}
+
+.section.locations .location-map {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 20px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+}
+
+.section.locations .location-map::after {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  content: "\F3C5";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 1;
+  text-rendering: auto;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 3rem;
+  height: 100%;
+  justify-content: space-around;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+
+.section.locations .location-map svg .overlay {
+  fill: #3F51B5;
+  fill-opacity: 0;
+  transition: fill-opacity 0.5s ease-in-out;
+}
+
+.section.locations .location-map:hover::after {
+  opacity: 1;
+}
+
+.section.locations .location-map:hover svg .overlay {
+  fill-opacity: 0.8;
+}
+
+.section.locations .location-details {
+  margin-top: 0.5rem;
+}
+
+.section.locations .location-details > * {
+  margin: 0;
+}
+
+.section.locations .location-details .headline {
+  text-transform: var(--headline-text-transform);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.section.locations .location-details .subline {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.section.locations .location-details .description {
+  margin: 0.75rem 0;
+}
+
+.section.locations .location-details .url {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 750px) {
+  .section.locations .location-details {
+    padding-top: 0.5rem;
+    width: calc(100% - 250px);
   }
 }
 

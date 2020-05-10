@@ -29,6 +29,7 @@ mix.styles([
 mix.scripts([
      'resources/js/libs/jquery.min.js',
      'resources/js/libs/bootstrap.bundle.min.js',
+     'resources/js/libs/font-awesome.js',
      'resources/js/libs/jquery.easing.min.js',
      'resources/js/libs/validate.js',
      'resources/js/libs/jquery.waypoints.min.js',

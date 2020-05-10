@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Album;
+use App\Location;
+use App\Picture;
 use App\Story;
 use App\Shedule;
 
@@ -26,6 +29,9 @@ class HomeController extends Controller
     {
         $stories = Story::all()->sortByDesc('year');
         $shedules = Shedule::all()->sortBy('time');
-        return view('home', compact('stories', 'shedules'));
+        $pictures = Picture::all();
+        $albums = Album::all();
+        $locations = Location::all()->sortBy('name');
+        return view('home', compact('stories', 'shedules','pictures', 'albums', 'locations'));
     }
 }

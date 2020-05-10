@@ -30,6 +30,10 @@ Route::group(['middleware' => 'admin'], function(){
     Route::get('/admin','AdminController@index');
     Route::resource('admin/stories', 'AdminStoriesController');
     Route::resource('admin/shedules', 'AdminShedulesController');
+    Route::resource('admin/contacts', 'AdminContactsController');
+    Route::resource('admin/albums', 'AdminAlbumsController');
+    Route::resource('admin/pictures', 'AdminPicturesController');
+    Route::resource('admin/locations', 'AdminLocationsController');
 });
 
 Route::get('admin/run-migrations', function () {

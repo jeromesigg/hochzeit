@@ -2,43 +2,38 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-        <h2>Contact</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2>Kontakt</h2>
+        <p> Schreibt uns, wenn ihr noch fragen habt oder ....</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-6">
           <div class="info-box mb-4">
             <i class="bx bx-map"></i>
-            <h3>Our Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <h3>Unsere Adresse</h3>
+            <p>Im Heidenkeller 7A, 8902 Urdorf</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="info-box  mb-4">
             <i class="bx bx-envelope"></i>
-            <h3>Email Us</h3>
-            <p>contact@example.com</p>
+            <h3>E-Mail</h3>
+            <p>jerome.sigg@gmail.com</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="info-box  mb-4">
             <i class="bx bx-phone-call"></i>
-            <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
+            <h3>Ruft uns an</h3>
+            <p>079 587 56 51</p>
           </div>
         </div>
 
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="200">
-        @if(Session::has('success'))
-          <div class="alert alert-success">
-            {{ Session::get('success') }}
-          </div>
-        @endif
         <div class="col-lg-12">
           {!! Form::open(['method' => 'POST', 'action'=>'ContactsController@store']) !!}
             <div class="form-row">

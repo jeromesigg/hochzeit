@@ -9,6 +9,10 @@
           </div>
           <div class="date">{{$shedule->time}}</div>
           <p>{!! $shedule->body !!}</p>
+          @if ($shedule->link)
+            <a target="blank" class="bnt-more" href="{!! $shedule->link !!}">Infos</a>    
+          @endif
+          
         </div>
       </div>  
     @endforeach

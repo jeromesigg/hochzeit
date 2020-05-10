@@ -6,6 +6,9 @@
 
     <!-- ======= Services Section ======= -->
     @include('contents.timeline')  
+
+    <!-- ======= Locations Section ======= -->
+    @include('contents.location')  
     
     <!-- ======= Counts Section ======= -->
     @include('contents.countdown')  

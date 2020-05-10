@@ -1,11 +1,4 @@
 /* Timeline */
-$primary: #3F51B5;
-$dark-primary: #303F9F;
-$light-primary: #C5CAE9;
-$text: #FFFFFF;
-$primary-text: #212121;
-$secondary-text: #757575;
-$accent: #FF4081;
 
 .timeline {
 
@@ -13,9 +6,9 @@ $accent: #FF4081;
 
 	&::before {
 		content: '';
-		background: $light-primary;
+		background: $primary;
 		width: 5px;
-		height: 95%;
+		height: 90%;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -83,7 +76,7 @@ $accent: #FF4081;
 .timeline-img {
 	width: 30px;
 	height: 30px;
-	background: $primary;
+	background: $dark-primary;
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
@@ -192,24 +185,19 @@ blockquote {
 	
 }
 
-// Colors
-$white: #fff;
-$black: #000;
-$primary: #d4a024;
-$gray: #616161;
 
 .container-timeline {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #fff;
+	background-color: $backgorund;
 	flex-direction: column;
   }
 
 // Timeline
 .timeline {
 	width: 100%;
-	background-color: #fff;
+	background-color: $backgorund;
 	box-shadow: 0 5px 25px 5px rgba($black, .2);
   
 	.swiper-container {

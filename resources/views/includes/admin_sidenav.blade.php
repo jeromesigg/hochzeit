@@ -16,7 +16,8 @@
         <div class="main-menu">
             <h5 class="sidenav-heading">Hochzeit</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">                  
-                <li><a href="/admin"> <i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="/admin"> <i class="fas fa-home"></i>Dashboard</a></li>  
+                <li><a href="/"> <i class="fas fa-home"></i>Zur Seite</a></li>
             </ul>
         </div>
         <div class="admin-menu">
@@ -44,6 +45,33 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
+                <li><a href="#LocationsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-map-marker-alt"></i> Orte</a>
+                    <ul id="LocationsDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('locations.index')}}">Orte</a>
+                        </li>
+                        <li>
+                            <a href="{{route('locations.create')}}">Ort erstellen</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#AlbumsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-images"></i></i> Fotoalbum</a>
+                    <ul id="AlbumsDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('albums.index')}}">Album</a>
+                        </li>
+                        <li>
+                            <a href="{{route('pictures.index')}}">Fotos</a>
+                        </li>
+                        <li>
+                            <a href="{{route('pictures.create')}}">Fotos erstellen</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li><a href="{{route('contacts.index')}}"> <i class="fas fa-clipboard-list"></i> Anfragen</a></li>
             </ul>
         </div>
     </div>
