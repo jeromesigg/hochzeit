@@ -52,7 +52,7 @@ class AdminLocationsController extends Controller
         $url = $url . $geocode['lat'] . ',' . $geocode['lng'] . '&key=' . env('GOOGLE_MAPS_GEOCODING_API_KEY');
         $image = file_get_contents($url);
         $folder = 'images/'; 
-        $name = time().$input['name'].'.png';
+        $name = time().str_replace(' ', '', $input['name']).'.png';
         $path = $folder.$name;
         Storage::disk('public')->put($path, $image);
         $photo = Photo::create(['file'=>$name]);

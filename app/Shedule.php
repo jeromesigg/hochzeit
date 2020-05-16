@@ -11,11 +11,17 @@ class Shedule extends Model
         'time',
         'photo_id',
         'title',
-        'body',
-        'link'
+        'content',
+        'link',
+        'location_id',
+        'icon'
     ];
 
     public function photo(){
         return $this->belongsTo('App\Photo');
+    }
+
+    public function location(){
+        return $this->belongsTo('App\Location');
     }
 }

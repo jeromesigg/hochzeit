@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Photo;
 use App\Shedule;
 use Illuminate\Http\Request;
-use App\Http\Requests\SheduleCreateRequest;
+use App\Location;
 
 class AdminShedulesController extends Controller
 {
@@ -30,7 +30,8 @@ class AdminShedulesController extends Controller
     public function create()
     {
         //
-        return view('admin.shedules.create');
+        $locations = Location::pluck('name','id')->all();
+        return view('admin.shedules.create', compact('locations'));
     }
 
     /**
@@ -39,11 +40,11 @@ class AdminShedulesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SheduleCreateRequest $request)
+    public function store(Request $request)
     {
         //
         $input = $request->all();
-
+        // $input['icon'] = base64_encode($input['icon']);
         if($file = $request->file('photo_id')){
             $name = time() . $file->getClientOriginalName();
             $file->move('images', $name);
@@ -51,7 +52,8 @@ class AdminShedulesController extends Controller
             
             $input['photo_id'] = $photo->id;
         }
-
+        $location = Location::findOrFail($input['location_id']);
+        $input['link'] = $location['id'];
         Shedule::create($input);
 
         return redirect('/admin/shedules');
@@ -77,8 +79,9 @@ class AdminShedulesController extends Controller
     public function edit($id)
     {
         //
+        $locations = Location::pluck('name','id')->all();
         $shedule = Shedule::findOrFail($id);
-        return view('admin.shedules.edit', compact('shedule'));
+        return view('admin.shedules.edit', compact('shedule', 'locations'));
     }
 
     /**
@@ -100,6 +103,8 @@ class AdminShedulesController extends Controller
             
             $input['photo_id'] = $photo->id;
         }
+        $location = Location::findOrFail($input['location_id']);
+        $input['link'] = '#'.$location['name'];
         Shedule::whereId($id)->first()->update($input);
         return redirect('/admin/shedules');
     }

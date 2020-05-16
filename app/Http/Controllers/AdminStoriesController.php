@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Photo;
 use App\Story;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoryCreateRequest;
 
 class AdminStoriesController extends Controller
 {
@@ -38,7 +37,7 @@ class AdminStoriesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoryCreateRequest $request)
+    public function store(Request $request)
     {
         //
         $input = $request->all();

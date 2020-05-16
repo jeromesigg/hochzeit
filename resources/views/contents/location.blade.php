@@ -1,8 +1,12 @@
-<section class="section locations">
+<section class="section locations" id="locations">
     <div class="container">
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h2>Orte</h2>
+            <p>Hier eine Liste aller Orte.</p>
+        </div>
         <ul class="location-list">
             @foreach ($locations as $location)
-                <li class="location">
+                <li class="location" id="location_{{$location->id}}">
                     <a class="location-map" target="_blank" href="{{$location->link}}">
                         <svg width="200" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <defs>

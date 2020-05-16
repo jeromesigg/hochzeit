@@ -6,15 +6,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Zopfaktion">
+        <meta name="description" content="Hochzeit Dashboard">
         <meta name="author" content="Jérôme Sigg">
         <meta name="robots" content="all,follow">
 
-        <title>Qualifikations Zentrale</title>
+        <title>Hochzeit Dashboard</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="{{asset('css/admin.css')}}" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/da9e6dcf22.js" crossorigin="anonymous"></script>
+        {{-- <script src="https://kit.fontawesome.com/da9e6dcf22.js" crossorigin="anonymous"></script> --}}
 
         @yield('styles')
 

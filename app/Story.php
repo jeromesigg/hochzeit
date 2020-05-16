@@ -12,7 +12,7 @@ class Story extends Model
         'year',
         'photo_id',
         'title',
-        'body'
+        'content'
     ];
 
     public function photo(){

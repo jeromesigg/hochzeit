@@ -18,8 +18,8 @@ class CreateStoriesTable extends Migration
             $table->timestamps();
             $table->integer('year');
             $table->string('title');
-            $table->text('body');
-            $table->string('photo_id')->nullable();
+            $table->text('content')->nullable();
+            $table->bigInteger('photo_id')->index()->unsigned()->nullable();
         });
     }
 

@@ -17,7 +17,7 @@
             <h5 class="sidenav-heading">Hochzeit</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">                  
                 <li><a href="/admin"> <i class="fas fa-home"></i>Dashboard</a></li>  
-                <li><a href="/"> <i class="fas fa-home"></i>Zur Seite</a></li>
+                <li><a href="/" target="blank"> <i class="fas fa-home"></i>Zur Seite</a></li>
             </ul>
         </div>
         <div class="admin-menu">

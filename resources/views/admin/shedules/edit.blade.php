@@ -23,8 +23,8 @@
                         {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('link', 'Link:') !!}
-                        {!! Form::text('link', null, ['class' => 'form-control']) !!}
+                        {!! Form::label('location_id', 'Ort:') !!}
+                        {!! Form::select('location_id', [''=>'Wähle Ort'] + $locations, null, ['class' => 'form-control', 'required']) !!}
                     </div>
                     <div class="form-group">
                             {!! Form::label('photo_id', 'Photo:') !!}

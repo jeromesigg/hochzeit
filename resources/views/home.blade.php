@@ -4,14 +4,16 @@
     <!-- ======= About Section ======= -->
     @include('contents.about')  
 
+        <!-- ======= Counts Section ======= -->
+        @include('contents.countdown')  
+
     <!-- ======= Services Section ======= -->
     @include('contents.timeline')  
 
     <!-- ======= Locations Section ======= -->
     @include('contents.location')  
     
-    <!-- ======= Counts Section ======= -->
-    @include('contents.countdown')  
+
 
     <!-- ======= Cta Section ======= -->
     @include('contents.cta')  

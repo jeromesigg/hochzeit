@@ -18,8 +18,8 @@ class CreateShedulesTable extends Migration
             $table->timestamps();
             $table->time('time');
             $table->string('title');
-            $table->text('body');
-            $table->string('photo_id')->nullable();
+            $table->text('content')->nullable();
+            $table->bigInteger('photo_id')->index()->unsigned()->nullable();
         });
     }
 

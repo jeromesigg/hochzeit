@@ -6,7 +6,7 @@
 
 	&::before {
 		content: '';
-		background: $primary;
+		background: rgba(103, 176, 209, 0.8);
 		width: 5px;
 		height: 90%;
 		position: absolute;
@@ -74,14 +74,20 @@
 }
 
 .timeline-img {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 	background: $dark-primary;
 	border-radius: 50%;
 	position: absolute;
 	left: 50%;
-	margin-top: 25px;
-	margin-left: -15px;
+	margin-top: 15px;
+	margin-left: -25px;
+}
+
+.timeline-icon {
+	font-size: 1.75em; 
+	color: white; 
+	margin-left: 7px;
 }
 
 .timeline-card {
@@ -198,8 +204,8 @@ blockquote {
 .timeline {
 	width: 100%;
 	background-color: $backgorund;
-	box-shadow: 0 5px 25px 5px rgba($black, .2);
-  
+	// box-shadow: 0 5px 25px 5px rgba($black, .2);
+}
 	.swiper-container {
 	  height: 600px;
 	  width: 100%;
@@ -431,4 +437,5 @@ blockquote {
 		&-content { right: 25%; }
 	  }
 	}
-  }  
+
+  

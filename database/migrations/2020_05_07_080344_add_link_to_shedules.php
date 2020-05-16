@@ -15,7 +15,6 @@ class AddLinkToShedules extends Migration
     {
         Schema::table('shedules', function (Blueprint $table) {
             //
-            $table->string('link')->nullable;
         });
     }
 
@@ -28,7 +27,6 @@ class AddLinkToShedules extends Migration
     {
         Schema::table('shedules', function (Blueprint $table) {
             //
-            $table->dropColumn('link');
         });
     }
 }

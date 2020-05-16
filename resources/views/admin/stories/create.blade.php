@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-
-    @include('includes.tinyeditor')
+@include('includes.tinyeditor')
     <section>
         <div class="container-fluid">
             <header> 
@@ -18,21 +17,18 @@
                     {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
-                        {!! Form::label('photo_id', 'Photo:') !!}
+                        {!! Form::label('photo_id', 'Photo (1900x600px):') !!}
                         {!! Form::file('photo_id', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('body', 'Beschreibung:') !!}
-                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3, 'required']) !!}
+                    {!! Form::label('content', 'Beschreibung:') !!}
+                    {!! Form::textarea('content', null, ['class' => 'form-control', 'rows'=>3]) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::submit('Story Erstellen', ['class' => 'btn btn-primary'])!!}
                 </div>
                 {!! Form::close()!!}
-            </div>   
-            <div class="row"> 
-                @include('includes.form_error')
-            </div>   
+            </div>     
         </div>
     </section>
 </div>

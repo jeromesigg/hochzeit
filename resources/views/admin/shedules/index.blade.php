@@ -18,6 +18,7 @@
                         <th scope="col">Zeit</th>
                         <th scope="col">Titel</th>
                         <th scope="col">Text</th>
+                        <th scope="col">Ort</th>
                         <th scope="col">Link</th>
                     </tr>
                 </thead>
@@ -28,7 +29,8 @@
                             <td><img height="50" src="{{$shedule->photo ? $shedule->photo->file : 'http://placehold.it/50x50'}}" alt=""></td>
                             <td>{{$shedule->time}}</td>
                             <td><a href="{{route('shedules.edit', $shedule->id)}}">{{$shedule->title}}</a></td>
-                            <td>{{$shedule->body}}</td>
+                            <td>{{$shedule->content}}</td>
+                            <td>{{$shedule->location['name']}}</td>
                             <td>{{$shedule->link}}</td>
                         </tr>   
                     @endforeach

@@ -17,8 +17,8 @@ class CreatePicturesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('photo_id');
-            $table->string('album_id');
+            $table->bigInteger('photo_id')->index()->unsigned()->nullable();
+            $table->bigInteger('album_id')->index()->unsigned()->nullable();
         });
     }
 

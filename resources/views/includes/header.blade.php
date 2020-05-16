@@ -13,8 +13,8 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul id="top-menu">
                 <li class="active"><a href="#header">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#timeline">Zeitplan</a></li>
+                <li><a href="#locations">Orte</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact Us</a></li>

@@ -6392,10 +6392,13 @@ nav.navbar a.menu-btn:hover {
 
 .side-navbar li a[data-toggle="collapse"]::before {
   content: '\f104';
+  font-family:"Font Awesome 5 Free";
+  font-style:normal;
+  font-variant:normal;
+  font-weight:900;
   display: inline-block;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: 'FontAwesome';
   position: absolute;
   top: 50%;
   right: 20px;

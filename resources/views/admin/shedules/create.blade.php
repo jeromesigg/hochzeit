@@ -16,19 +16,22 @@
                 <div class="form-group">
                     {!! Form::label('title', 'Titel:') !!}
                     {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
-                </div>
+                </div>                 
                 <div class="form-group">
-                    {!! Form::label('link', 'Link:') !!}
-                    {!! Form::text('link', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('icon', 'Icon:') !!}
+                    {!! Form::text('icon', null, ['class' => 'form-control', 'required']) !!}
+                </div> 
+                <div class="form-group">
+                    {!! Form::label('location_id', 'Ort:') !!}
+                    {!! Form::select('location_id', [''=>'Wähle Ort'] + $locations, null, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
                         {!! Form::label('photo_id', 'Photo:') !!}
                         {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
                 </div>
-
                 <div class="form-group">
-                    {!! Form::label('body', 'Beschreibung:') !!}
-                    {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3, 'required']) !!}
+                    {!! Form::label('content', 'Beschreibung:') !!}
+                    {!! Form::textarea('content', null, ['class' => 'form-control', 'rows'=>3]) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::submit('Ablauf Erstellen', ['class' => 'btn btn-primary'])!!}
