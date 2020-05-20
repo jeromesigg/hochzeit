@@ -1,4 +1,4 @@
-<section id="portfolio" class="portfolio">
+<section id="photos" class="portfolio section section-bg">
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">

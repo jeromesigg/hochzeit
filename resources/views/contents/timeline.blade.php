@@ -1,4 +1,4 @@
-<section id="timeline" class="section-bg">
+<section id="timeline" class="section section-bg">
   <div class="section-title" data-aos="fade-in" data-aos-delay="100">
     <h2>Wir heiraten</h2>
     <p>Hier der Tagesablauf.</p>
@@ -18,11 +18,13 @@
             
          
           <div class="date">{{$shedule->time}}</div>
-          <h2>{{$shedule->title}}</h2>
-          <p>{!! $shedule->content !!}</p>
-          @if ($shedule->link)
-            <a class="scrollto" href="#location_{!! $shedule->location_id !!}" >Karte</a>    
-          @endif
+          <div class="timeline-text">
+            <h2>{{$shedule->title}}</h2>
+            <p>{!! $shedule->content !!}</p>
+            @if ($shedule->link)
+              <a class="scrollto" href="#location_{!! $shedule->location_id !!}" >Karte</a>    
+            @endif
+          </div>
         </div>
           
         </div>

@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contacts', 'ContactsController@create');
 Route::post('/contacts', 'ContactsController@store');
 
+Route::get('/invitations', 'InvitationsController@create');
+Route::post('/invitations', 'InvitationsController@store');
 
 Route::group(['middleware' => 'admin'], function(){
 
@@ -34,6 +36,9 @@ Route::group(['middleware' => 'admin'], function(){
     Route::resource('admin/albums', 'AdminAlbumsController');
     Route::resource('admin/pictures', 'AdminPicturesController');
     Route::resource('admin/locations', 'AdminLocationsController');
+    Route::resource('admin/invitations', 'AdminInvitationsController');
+    Route::resource('admin/responses', 'AdminResponsesController');
+    Route::resource('admin/teams', 'AdminTeamsController');
 });
 
 Route::get('admin/run-migrations', function () {

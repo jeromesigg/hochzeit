@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Album;
+use App\Invitation;
 use Illuminate\Http\Request;
 
-class AdminAlbumsController extends Controller
+class AdminInvitationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class AdminAlbumsController extends Controller
     public function index()
     {
         //
-        $albums = Album::paginate(10);
-        return view('admin.albums.index', compact('albums'));
+        $invitations = Invitation::paginate(10);
+        return view('admin.invitations.index', compact('invitations'));
     }
 
     /**
@@ -38,9 +38,6 @@ class AdminAlbumsController extends Controller
     public function store(Request $request)
     {
         //
-        $input = $request->all();
-        Album::create($input);
-        return redirect('admin/albums');
     }
 
     /**
@@ -63,8 +60,6 @@ class AdminAlbumsController extends Controller
     public function edit($id)
     {
         //
-        $album = Album::findOrFail($id);
-        return view('admin.albums.edit', compact('album'));
     }
 
     /**
@@ -77,9 +72,6 @@ class AdminAlbumsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Album::findOrFail($id)->update($request->all());
-
-        return redirect('/admin/albums');
     }
 
     /**
@@ -91,7 +83,5 @@ class AdminAlbumsController extends Controller
     public function destroy($id)
     {
         //
-        Album::findOrFail($id)->delete();
-        return redirect('/admin/albums');
     }
 }

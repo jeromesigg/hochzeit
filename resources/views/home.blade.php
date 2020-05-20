@@ -18,6 +18,9 @@
     <!-- ======= Cta Section ======= -->
     @include('contents.cta')  
 
+    <!-- ======= Invitation Section ======= -->
+    @include('contents.invitation')  
+
     <!-- ======= Portfolio Section ======= -->
     @include('contents.portfolio')  
     

@@ -1,4 +1,4 @@
-<section id="cta" class="cta">
+<section id="cta" class="cta section section-bg">
     <div class="container" data-aos="zoom-in">
 
       <div class="text-center">

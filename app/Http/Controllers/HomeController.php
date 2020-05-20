@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Album;
 use App\Location;
 use App\Picture;
+use App\Response;
 use App\Story;
 use App\Shedule;
+use App\Team;
 
 class HomeController extends Controller
 {
@@ -32,6 +34,8 @@ class HomeController extends Controller
         $pictures = Picture::all();
         $albums = Album::all();
         $locations = Location::all()->sortBy('name');
-        return view('home', compact('stories', 'shedules','pictures', 'albums', 'locations'));
+        $responses = Response::pluck('name','id')->all();
+        $teams = Team::all()->sortBy('name');
+        return view('home', compact('stories', 'shedules','pictures', 'albums', 'locations', 'responses', 'teams'));
     }
 }

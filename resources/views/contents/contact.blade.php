@@ -1,4 +1,4 @@
-<section id="contact" class="contact section-bg">
+<section id="contact" class="contact section section-bg">
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">

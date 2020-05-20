@@ -15,9 +15,11 @@
                 <li class="active"><a href="#header">Home</a></li>
                 <li><a href="#timeline">Zeitplan</a></li>
                 <li><a href="#locations">Orte</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#invitation">Anmeldung</a></li>
+                <li><a href="#photos">Fotos</a></li>
+                <li><a href="#story">Über uns</a></li>
+                <li><a href="#team">Trauzeugen</a></li>
+                <li><a href="#contact">Kotankt</a></li>
                     @if (Auth::user()->isAdmin())
                     <li><a href="/admin">Dashboard</a></li>            
                     @endif

@@ -3,6 +3,7 @@
 .timeline {
 
 	position: relative;
+	margin: 20px;
 
 	&::before {
 		content: '';
@@ -111,16 +112,24 @@
 
 .timeline-img-header {
 
-	height: 200px;
+	height: 400px;
 	position: relative;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
 
 	h2 {
-		color: $text;
-		position: absolute;
-		bottom: 5px;
-		left: 20px;
+		padding: 0 20px;
+		// color: $text;
+		// position: absolute;
+		// bottom: 5px;
+		// left: 20px;
 	}
+}
+
+.timeline-text {
+	background-color: rgb(256,256,256,0.8);
+	position: absolute;
+	bottom: 0px;
+	width: -webkit-fill-available;
 }
 
 blockquote {
@@ -201,11 +210,11 @@ blockquote {
   }
 
 // Timeline
-.timeline {
+.story {
 	width: 100%;
 	background-color: $backgorund;
 	// box-shadow: 0 5px 25px 5px rgba($black, .2);
-}
+
 	.swiper-container {
 	  height: 600px;
 	  width: 100%;
@@ -247,7 +256,7 @@ blockquote {
 		z-index: 2;
 	  }
   
-	  .timeline-year {
+	  .story-year {
 		display: block;
 		font-style: italic;
 		font-size: 42px;
@@ -259,7 +268,7 @@ blockquote {
 		transition: .2s ease .4s;
 	  }
   
-	  .timeline-title {
+	  .story-title {
 		font-weight: 800;
 		font-size: 34px;
 		margin: 0 0 30px;
@@ -268,7 +277,7 @@ blockquote {
 		transition: .2s ease .5s;
 	  }
   
-	  .timeline-text {
+	  .story-text {
 		line-height: 1.5;
 		opacity: 0;
 		transform: translate3d(20px, 0, 0);
@@ -276,19 +285,19 @@ blockquote {
 	  }
 	  
 	  &-active {
-		.timeline-year {
+		.story-year {
 		  opacity: 1;
 		  transform: translate3d(0, 0, 0);
 		  transition: .4s ease 1.6s;
 		}
 		
-		.timeline-title {
+		.story-title {
 		  opacity: 1;
 		  transform: translate3d(0, 0, 0);
 		  transition: .4s ease 1.7s;
 		}
 		
-		.timeline-text {
+		.story-text {
 		  opacity: 1;
 		  transform: translate3d(0, 0, 0);
 		  transition: .4s ease 1.8s;
@@ -392,12 +401,12 @@ blockquote {
 		  text-align: right;
 		}
 		
-		.timeline-year {
+		.story-year {
 		  margin-bottom: 0;
 		  font-size: 32px;   
 		}
 		
-		.timeline-title {
+		.story-title {
 		  font-size: 46px;
 		  margin: 0;
 		}
@@ -438,4 +447,4 @@ blockquote {
 	  }
 	}
 
-  
+}

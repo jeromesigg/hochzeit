@@ -226,6 +226,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width:1600px){
+  .container,.container-lg,.container-md,.container-sm,.container-xl{
+    max-width:1400px
+  }
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;

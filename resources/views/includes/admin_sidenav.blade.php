@@ -18,7 +18,20 @@
             <ul id="side-main-menu" class="side-menu list-unstyled">                  
                 <li><a href="/admin"> <i class="fas fa-home"></i>Dashboard</a></li>  
                 <li><a href="/" target="blank"> <i class="fas fa-home"></i>Zur Seite</a></li>
+                <li><a href="#InvitationsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="far fa-address-book"></i> Anmeldungen</a>
+                    <ul id="InvitationsDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('invitations.index')}}">Anmeldungen</a>
+                        </li>
+                        <li>
+                            <a href="{{route('responses.index')}}">Antwort-Möglichkeiten</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li><a href="{{route('contacts.index')}}"> <i class="fas fa-clipboard-list"></i> Anfragen</a></li>
             </ul>
+            
         </div>
         <div class="admin-menu">
             <h5 class="sidenav-heading">Administration</h5>
@@ -57,7 +70,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="#AlbumsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-images"></i></i> Fotoalbum</a>
+                    <a href="#AlbumsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-images"></i> Fotoalbum</a>
                     <ul id="AlbumsDropdown" class="collapse list-unstyled ">
                         <li>
                             <a href="{{route('albums.index')}}">Album</a>
@@ -71,7 +84,18 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
-                <li><a href="{{route('contacts.index')}}"> <i class="fas fa-clipboard-list"></i> Anfragen</a></li>
+                <li>
+                    <a href="#TeamsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-user-friends"></i> Trauzeugen</a>
+                    <ul id="TeamsDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('teams.index')}}">Trauzeugen</a>
+                        </li>
+                        <li>
+                            <a href="{{route('teams.create')}}">Trauzeugen erstellen</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
             </ul>
         </div>
     </div>

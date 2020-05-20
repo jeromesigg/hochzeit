@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Album;
+use App\Team;
+use App\Photo;
 use Illuminate\Http\Request;
 
-class AdminAlbumsController extends Controller
+class AdminTeamsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class AdminAlbumsController extends Controller
     public function index()
     {
         //
-        $albums = Album::paginate(10);
-        return view('admin.albums.index', compact('albums'));
+        $teams = Team::paginate(10);
+        return view('admin.teams.index', compact('teams'));
     }
 
     /**
@@ -27,6 +28,7 @@ class AdminAlbumsController extends Controller
     public function create()
     {
         //
+        return view('admin.teams.create');
     }
 
     /**
@@ -39,8 +41,18 @@ class AdminAlbumsController extends Controller
     {
         //
         $input = $request->all();
-        Album::create($input);
-        return redirect('admin/albums');
+
+        if($file = $request->file('photo_id')){
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            $photo = Photo::create(['file'=>$name]);
+            
+            $input['photo_id'] = $photo->id;
+        }
+
+        Team::create($input);
+
+        return redirect('/admin/teams');
     }
 
     /**
@@ -63,8 +75,8 @@ class AdminAlbumsController extends Controller
     public function edit($id)
     {
         //
-        $album = Album::findOrFail($id);
-        return view('admin.albums.edit', compact('album'));
+        $team = Team::findOrFail($id);
+        return view('admin.teams.edit', compact('team'));
     }
 
     /**
@@ -77,9 +89,17 @@ class AdminAlbumsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Album::findOrFail($id)->update($request->all());
+        $input = $request->all();
 
-        return redirect('/admin/albums');
+        if($file = $request->file('photo_id')){
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            $photo = Photo::create(['file'=>$name]);
+            
+            $input['photo_id'] = $photo->id;
+        }
+        Team::whereId($id)->first()->update($input);
+        return redirect('/admin/teams');
     }
 
     /**
@@ -91,7 +111,11 @@ class AdminAlbumsController extends Controller
     public function destroy($id)
     {
         //
-        Album::findOrFail($id)->delete();
-        return redirect('/admin/albums');
+        $team = Team::findOrFail($id);
+        unlink(public_path() . $team->photo->file);
+
+        $team->delete();
+
+        return redirect('/admin/teams');
     }
 }

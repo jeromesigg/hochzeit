@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Album;
+use App\Response;
 use Illuminate\Http\Request;
 
-class AdminAlbumsController extends Controller
+class AdminResponsesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class AdminAlbumsController extends Controller
     public function index()
     {
         //
-        $albums = Album::paginate(10);
-        return view('admin.albums.index', compact('albums'));
+        $responses = Response::paginate(10);
+        return view('admin.responses.index', compact('responses'));
     }
 
     /**
@@ -39,8 +39,8 @@ class AdminAlbumsController extends Controller
     {
         //
         $input = $request->all();
-        Album::create($input);
-        return redirect('admin/albums');
+        Response::create($input);
+        return redirect('admin/responses');
     }
 
     /**
@@ -63,8 +63,8 @@ class AdminAlbumsController extends Controller
     public function edit($id)
     {
         //
-        $album = Album::findOrFail($id);
-        return view('admin.albums.edit', compact('album'));
+        $response = Response::findOrFail($id);
+        return view('admin.responses.edit', compact('response'));
     }
 
     /**
@@ -77,9 +77,9 @@ class AdminAlbumsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Album::findOrFail($id)->update($request->all());
+        Response::findOrFail($id)->update($request->all());
 
-        return redirect('/admin/albums');
+        return redirect('/admin/responses');
     }
 
     /**
@@ -91,7 +91,7 @@ class AdminAlbumsController extends Controller
     public function destroy($id)
     {
         //
-        Album::findOrFail($id)->delete();
-        return redirect('/admin/albums');
+        Response::findOrFail($id)->delete();
+        return redirect('/admin/responses');
     }
 }

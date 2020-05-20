@@ -1,4 +1,4 @@
-<section class="section locations" id="locations">
+<section class="locations section section-bg" id="locations">
     <div class="container">
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
             <h2>Orte</h2>

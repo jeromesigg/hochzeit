@@ -1,4 +1,4 @@
-<section id="about" class="about">
+<section id="about" class="about section section-bg">
     <div class="container">
 
       <div class="row no-gutters">

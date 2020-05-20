@@ -4938,78 +4938,88 @@ var ringer = {
     }
   }
   
-  ringer.init();
+ringer.init();
 
-  $(function(){
+$(function(){
 
-    window.sr = ScrollReveal();
-  
-    if ($(window).width() < 768) {
-  
-      if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-        $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-      }
-  
-      sr.reveal('.js--fadeInRight', {
-        origin: 'right',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-  
-    } else {
-      
-      sr.reveal('.js--fadeInLeft', {
-        origin: 'left',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-  
-      sr.reveal('.js--fadeInRight', {
-        origin: 'right',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-  
+  window.sr = ScrollReveal();
+
+  if ($(window).width() < 768) {
+
+    if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+      $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
     }
+
+    sr.reveal('.js--fadeInRight', {
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+
+  } else {
     
     sr.reveal('.js--fadeInLeft', {
-        origin: 'left',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-  
-      sr.reveal('.js--fadeInRight', {
-        origin: 'right',
-        distance: '300px',
-        easing: 'ease-in-out',
-        duration: 800,
-      });
-  
-  
-  });
+      origin: 'left',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
 
-  // Story Timeline
+    sr.reveal('.js--fadeInRight', {
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
 
-  var timelineSwiper = new Swiper ('.timeline .swiper-container', {
-    direction: 'vertical',
-    loop: false,
-    speed: 1600,
-    pagination: '.swiper-pagination',
-    paginationBulletRender: function (swiper, index, className) {
-      var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
-      return '<span class="' + className + '">' + year + '</span>';
-    },
-    paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    breakpoints: {
-      768: {
-        direction: 'horizontal',
-      }
+  }
+  
+  sr.reveal('.js--fadeInLeft', {
+      origin: 'left',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+
+    sr.reveal('.js--fadeInRight', {
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+
+
+});
+
+// Story Timeline
+
+var timelineSwiper = new Swiper ('.story .swiper-container', {
+  direction: 'vertical',
+  loop: false,
+  speed: 1600,
+  pagination: '.swiper-pagination',
+  paginationBulletRender: function (swiper, index, className) {
+    var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+    return '<span class="' + className + '">' + year + '</span>';
+  },
+  paginationClickable: true,
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  breakpoints: {
+    768: {
+      direction: 'horizontal',
     }
-  });
-  
+  }
+});
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+		// Assign active class to nav links while scolling
+		$('.section').each(function(i) {
+				if ($(this).position().top <= (scrollDistance-600)) {
+						$('.nav-menu li.active').removeClass('active');
+						$('.nav-menu li').eq(i).addClass('active');
+				}
+		});
+}).scroll();
