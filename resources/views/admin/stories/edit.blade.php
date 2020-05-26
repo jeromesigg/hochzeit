@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-sm-3" >
         
-                    <img src="{{$story->photo ? $story->photo->file : 'http://placehold.it/350x350'}}" alt="" class="img-responsive" style="max-width: -webkit-fill-available;">
+                    <img src="{{$story->photo ? $story->photo->file : 'http://placehold.it/250x250'}}" alt="" class="img-responsive" style="max-width: -webkit-fill-available;">
                 </div> 
                 <div class="col-sm-9">
                     {!! Form::model($story, ['method' => 'PATCH', 'action'=>['AdminStoriesController@update', $story->id], 'files' => true]) !!}
@@ -27,8 +27,8 @@
                             {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('body', 'Beschreibung:') !!}
-                        {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3]) !!}
+                        {!! Form::label('content', 'Beschreibung:') !!}
+                        {!! Form::textarea('content', null, ['class' => 'form-control', 'rows'=>3]) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::submit('Story updaten', ['class' => 'btn btn-primary col-sm-6'])!!}
