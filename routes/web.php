@@ -27,6 +27,7 @@ Route::post('/contacts', 'ContactsController@store');
 Route::get('/invitations', 'InvitationsController@create');
 Route::post('/invitations', 'InvitationsController@store');
 
+
 Route::group(['middleware' => 'admin'], function(){
 
     Route::get('/admin','AdminController@index');

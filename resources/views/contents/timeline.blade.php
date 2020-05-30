@@ -14,7 +14,7 @@
           </span>
         </div>
         <div class="timeline-content timeline-card js--fadeInRight">
-          <div class="timeline-img-header" style="background-image: url({{$shedule->photo->file}})">
+          <div class="timeline-img-header" style="background-image: url({{$shedule->photo ? $shedule->photo->file : 'http://placehold.it/600x400'}})">
             
          
           <div class="date">{{$shedule->time}}</div>

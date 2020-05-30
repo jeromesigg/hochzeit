@@ -4765,7 +4765,7 @@ or at least read this note: http://i.imgur.com/7C0ws9e.gif
 }
 .vbox-container img{
     max-width: 100%;
-    height: auto;
+    height: -webkit-fill-available;
 }
 .vbox-figlio{
     box-shadow: 0 0 12px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -5737,7 +5737,7 @@ section {
 }
 
 .team .member .member-info {
-  position: absolute;
+  /* position: absolute; */
   top: 85%;
   left: 20px;
   right: 20px;
@@ -5745,13 +5745,13 @@ section {
   padding: 20px 0;
   color: #2f4d5a;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  max-height: 95px;
+  /* max-height: 95px; */
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  /* transition: max-height 0.5s ease-in-out; */
 }
 
 .team .member:hover .member-info {
-  max-height: 300px;
+  /* max-height: 300px; */
 }
 
 .team .member h4 {

@@ -8,7 +8,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     @foreach ($stories as $story)
-                        <div class="swiper-slide" style="background-image: url({{$story->photo->file}})" data-year="{{$story->year}}">
+                        <div class="swiper-slide" style="background-image: url({{$story->photo ? $story->photo->file : 'http://placehold.it/1900x600'}})" data-year="{{$story->year}}">
                             <div class="swiper-slide-content"><span class="story-year">{{$story->year}}</span>
                                 <h4 class="story-title">{{$story->title}}</h4>
                                 <p class="story-text">{!! $story->content !!}</p>

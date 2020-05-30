@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Album;
-use App\Location;
-use App\Picture;
-use App\Response;
-use App\Story;
-use App\Shedule;
 use App\Team;
+use App\Album;
+use App\Story;
+use App\Picture;
+use App\Shedule;
+use App\Location;
+use App\Response;
+use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class HomeController extends Controller
 {
@@ -31,7 +33,8 @@ class HomeController extends Controller
     {
         $stories = Story::all()->sortByDesc('year');
         $shedules = Shedule::all()->sortBy('time');
-        $pictures = Picture::all();
+        $pictures = Picture::paginate(15);
+        // $pictures->withPath('#photos');
         $albums = Album::all();
         $locations = Location::all()->sortBy('name');
         $responses = Response::pluck('name','id')->all();

@@ -9,15 +9,17 @@
       <div class="row">
         @foreach ($teams as $team)
           <div class="col-lg-6 col-md-6">
+
             <div class="member" data-aos="fade-up">
-              <div class="pic"><img src="{{$team->photo->file}}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>{{$team->name}}</h4>
                 <span>{{$team->title}}</span>
+                <h4>{{$team->name}}</h4>
                 <div class="social">
                   {!! $team->description !!}
                 </div>
               </div>
+              <div class="pic"><img src="{{$team->photo->file}}" class="img-fluid" alt=""></div>
+              
             </div>
           </div>    
         @endforeach
