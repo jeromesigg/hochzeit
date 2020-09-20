@@ -12,7 +12,6 @@ class Shedule extends Model
         'photo_id',
         'title',
         'content',
-        'link',
         'location_id',
         'icon'
     ];

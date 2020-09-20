@@ -52,8 +52,6 @@ class AdminShedulesController extends Controller
             
             $input['photo_id'] = $photo->id;
         }
-        $location = Location::findOrFail($input['location_id']);
-        $input['link'] = $location['id'];
         Shedule::create($input);
 
         return redirect('/admin/shedules');
@@ -103,8 +101,6 @@ class AdminShedulesController extends Controller
             
             $input['photo_id'] = $photo->id;
         }
-        $location = Location::findOrFail($input['location_id']);
-        $input['link'] = '#'.$location['name'];
         Shedule::whereId($id)->first()->update($input);
         return redirect('/admin/shedules');
     }
