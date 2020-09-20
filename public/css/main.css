@@ -4885,6 +4885,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 20px 0;
+  background: var(--lavender);
+  opacity : 0.9;
 }
 
 #header.header-scrolled {
@@ -4937,13 +4939,13 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   float: left;
   margin-top: -10px;
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
 }
 
 .nav-menu a {
   display: block;
   position: relative;
-  color: #2f4d5a;
+  color: white;
   padding: 20px 15px;
   transition: 0.3s;
   font-size: 13px;
@@ -6253,3 +6255,86 @@ canvas{
   font-weight: normal;
   src: local('Montserrat Black Italic'), url('/fonts/Montserrat-BlackItalic.woff') format('woff');
   }
+
+  :root {
+    --apricot: #FFCDB2;
+    --melon: #FFB4A2;
+    --pink: #E5989B;
+    --lavender: #B5838D;
+    --oldlavender: #6D6875;
+    --darkliver: #5B5661;
+  }
+
+  .card-img {
+    border-radius: 0;
+    opacity: 0.3;
+  }
+
+  .card{
+    margin-bottom: 25px;
+  }
+  .btn-primary{
+    background-color: var(--oldlavender);
+    border-color:var(--oldlavender);
+  }
+  .btn-primary:hover{
+    background-color: var(--darkliver);
+    border-color: var(--darkliver);
+  }
+
+  .btn-primary.focus,.btn-primary:focus{
+    background-color:var(--oldlavender);
+    border-color:var(--oldlavender);
+    box-shadow:0 0 0 .2rem var(--oldlavender)
+  }
+
+  .form-control:focus {
+    color: #495057;
+    border-color: var(--pink);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem var(--pink);
+  }
+
+  #header.header-scrolled {
+      background: var(--lavender);
+      height: 60px;
+      padding: 10px 0;
+      opacity: 1;
+  }
+
+  .section-title h2 {
+    color: var(--oldlavender);
+  }
+    
+  a {
+    color: var(--oldlavender);
+  }
+  
+  a:hover {
+    color: var(--darkliver);;
+    text-decoration: none;
+  }
+
+  .cta {
+    background: linear-gradient(rgba(255,205,178, 0.8), rgba(255,205,178, 0.8)), url("../img/cta-bg.jpg") fixed center center;
+    background-size: cover;
+    padding: 60px 0;
+  }
+
+  .portfolio .portfolio-wrap .portfolio-links a {
+    background: var(--oldlavender);
+  }
+
+  .back-to-top {
+    background: var(--oldlavender);
+  }
+
+  .progress-bar {
+    background-color: var(--lavender);
+  }
+
+  .contact .info-box i {
+    color: var(--lavender);
+  }
+
+

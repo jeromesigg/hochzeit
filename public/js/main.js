@@ -4902,8 +4902,9 @@ var ringer = {
   
       
       // calculate arc end angle
-      var degrees = 360-(value / ring.max) * 360.0;
+      var degrees = (360-(value / ring.max) * 360.0)-90;
       var endAngle = degrees * (Math.PI / 180);
+    
       
       $r.ctx.save();
   
@@ -4918,9 +4919,9 @@ var ringer = {
       $r.ctx.stroke();
      
       // second circle
-      $r.ctx.strokeStyle = "rgba(0, 150, 163, 0.9)";
+      $r.ctx.strokeStyle = "#B5838D";
       $r.ctx.beginPath();
-      $r.ctx.arc(0,0,$r.r_size/2,0,endAngle, 1);
+      $r.ctx.arc(0,0,$r.r_size/2,-Math.PI/2,endAngle, 1);
       $r.ctx.lineWidth =$r.r_thickness;
       $r.ctx.stroke();
       

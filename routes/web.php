@@ -27,6 +27,9 @@ Route::post('/contacts', 'ContactsController@store');
 Route::get('/invitations', 'InvitationsController@create');
 Route::post('/invitations', 'InvitationsController@store');
 
+Route::get('/guest_gift', 'GuestGiftController@create');
+Route::post('/guest_gift', 'GuestGiftController@store');
+
 
 Route::group(['middleware' => 'admin'], function(){
 
@@ -40,6 +43,7 @@ Route::group(['middleware' => 'admin'], function(){
     Route::resource('admin/invitations', 'AdminInvitationsController');
     Route::resource('admin/responses', 'AdminResponsesController');
     Route::resource('admin/teams', 'AdminTeamsController');
+    Route::resource('admin/gifts', 'AdminGiftsController');
 });
 
 Route::get('admin/run-migrations', function () {

@@ -59,7 +59,7 @@
 }
 
 .locations .location-map svg .overlay {
-  fill: #5462b3;
+  fill: #B5838D;
   fill-opacity: 0;
   transition: fill-opacity 0.5s ease-in-out;
 }
@@ -117,7 +117,7 @@
 
 .timeline::before {
   content: "";
-  background: rgba(103, 176, 209, 0.8);
+  background: #FFB4A2;
   width: 5px;
   height: 90%;
   position: absolute;
@@ -182,7 +182,7 @@
 .timeline-img {
   width: 50px;
   height: 50px;
-  background: #303F9F;
+  background: #5B5661;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -232,14 +232,14 @@
 blockquote {
   margin-top: 30px;
   color: #757575;
-  border-left-color: #5462b3;
+  border-left-color: #B5838D;
   padding: 0 20px;
 }
 
 .date {
-  background: #FF4081;
+  background: #FFCDB2;
   display: inline-block;
-  color: #FFFFFF;
+  color: #212121;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -342,7 +342,7 @@ blockquote {
   font-size: 42px;
   margin-bottom: 50px;
   transform: translate3d(20px, 0, 0);
-  color: #5462b3;
+  color: #B5838D;
   font-weight: 300;
   opacity: 0;
   transition: 0.2s ease 0.4s;
@@ -410,7 +410,7 @@ blockquote {
   text-align: center;
   opacity: 1;
   background: transparent;
-  color: #5462b3;
+  color: #B5838D;
   margin: 15px 0 !important;
   position: relative;
 }
@@ -423,13 +423,13 @@ blockquote {
   width: 6px;
   height: 6px;
   border-radius: 100%;
-  background-color: #5462b3;
+  background-color: #B5838D;
   transform: scale(0);
   transition: 0.2s;
 }
 
 .story .swiper-pagination-bullet-active {
-  color: #5462b3;
+  color: #B5838D;
 }
 
 .story .swiper-pagination-bullet-active::before {

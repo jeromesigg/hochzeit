@@ -7,7 +7,7 @@
 
 	&::before {
 		content: '';
-		background: rgba(103, 176, 209, 0.8);
+		background: $melon;
 		width: 5px;
 		height: 90%;
 		position: absolute;
@@ -140,9 +140,9 @@ blockquote {
 }
 
 .date {
-	background: $accent;
+	background: $apricot;
 	display: inline-block;
-	color: $text;
+	color: $primary-text;
 	padding: 10px;
 	position: absolute;
 	top: 0;

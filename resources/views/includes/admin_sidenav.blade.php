@@ -96,6 +96,18 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
+                <li>
+                    <a href="#GiftsDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-gifts"></i> Geschenke</a>
+                    <ul id="GiftsDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('gifts.index')}}">Geschenke</a>
+                        </li>
+                        <li>
+                            <a href="{{route('gifts.create')}}">Geschenk erstellen</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
             </ul>
         </div>
     </div>

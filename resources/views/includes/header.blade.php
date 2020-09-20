@@ -19,7 +19,7 @@
                 <li><a href="#photos">Fotos</a></li>
                 <li><a href="#story">Über uns</a></li>
                 <li><a href="#team">Trauzeugen</a></li>
-                <li><a href="#contact">Kotankt</a></li>
+                <li><a href="#contact">Kontakt</a></li>
                 @if (Auth::user()->isAdmin())
                     <li><a href="/admin" target="blank">Dashboard</a></li>            
                 @endif

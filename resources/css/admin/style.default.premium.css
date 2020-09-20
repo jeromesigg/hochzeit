@@ -5584,6 +5584,7 @@ a > code {
 
 .card-img {
   border-radius: 0;
+  opacity: 0.3;
 }
 
 .card-img-top {
