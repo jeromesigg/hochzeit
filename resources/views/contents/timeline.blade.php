@@ -1,7 +1,6 @@
-<section id="timeline" class="section section-bg">
+<section id="timeline" class="section">
   <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-    <h2>Wir heiraten</h2>
-    <p>Hier der Tagesablauf.</p>
+    <h2>Zeitplan</h2>
 </div>
 
 
@@ -10,7 +9,7 @@
       <div class="timeline-item">
         <div class="timeline-img">
           <span class="timeline-icon">
-            <i class="fas fa-church"></i>
+            <i class="{{$shedule->icon}}"></i>
           </span>
         </div>
         <div class="timeline-content timeline-card js--fadeInRight">
@@ -21,7 +20,7 @@
           <div class="timeline-text">
             <h2>{{$shedule->title}}</h2>
             <p>{!! $shedule->content !!}</p>
-            @if ($shedule->link)
+            @if ($shedule->location_id)
               <a class="scrollto" href="#location_{!! $shedule->location_id !!}" >Karte</a>    
             @endif
           </div>

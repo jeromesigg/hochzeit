@@ -43,7 +43,7 @@ class AdminGiftsController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -92,7 +92,7 @@ class AdminGiftsController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -112,7 +112,10 @@ class AdminGiftsController extends Controller
     {
         //
         $gift = Gift::findOrFail($id);
-        unlink(public_path() . $gift->photo->file);
+        
+        if($gift->photo){
+            unlink(public_path() . $gift->photo->file);
+        }
 
         $gift->delete();
 

@@ -15,8 +15,8 @@
                 <div class="col-sm-9">
                     {!! Form::model($story, ['method' => 'PATCH', 'action'=>['AdminStoriesController@update', $story->id], 'files' => true]) !!}
                     <div class="form-group">
-                        {!! Form::label('year', 'Jahr:') !!}
-                        {!! Form::text('year', null, ['class' => 'form-control']) !!}
+                        {!! Form::label('date', 'Datum:') !!}
+                        {!! Form::date('date', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('title', 'Titel:') !!}

@@ -4,7 +4,7 @@
     <section>
         <div class="container-fluid">
             <header> 
-                <h1 class="h3 display">ORt bearbeiten</h1>
+                <h1 class="h3 display">Ort bearbeiten</h1>
             </header>
             <div class="row">
                 <div class="col-sm-3" >

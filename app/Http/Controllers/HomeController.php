@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $stories = Story::all()->sortByDesc('year');
+        $stories = Story::all()->sortByDesc('date');
         $shedules = Shedule::all()->sortBy('time');
         $pictures = Picture::paginate(6);
         // $pictures->withPath('#photos');

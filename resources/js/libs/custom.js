@@ -178,34 +178,25 @@ $(function(){
 
 });
 
-// Story Timeline
 
-var timelineSwiper = new Swiper ('.story .swiper-container', {
-  direction: 'vertical',
-  loop: false,
-  speed: 1600,
-  pagination: '.swiper-pagination',
-  paginationBulletRender: function (swiper, index, className) {
-    var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
-    return '<span class="' + className + '">' + year + '</span>';
-  },
-  paginationClickable: true,
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-  breakpoints: {
-    768: {
-      direction: 'horizontal',
-    }
-  }
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 10,
+  slidesPerView: 5,
+  loop: true,
+  freeMode: true,
+  loopedSlides: 5, //looped slides should be the same
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
 });
-
-$(window).scroll(function() {
-		var scrollDistance = $(window).scrollTop();
-		// Assign active class to nav links while scolling
-		$('.section').each(function(i) {
-				if ($(this).position().top <= (scrollDistance-600)) {
-						$('.nav-menu li.active').removeClass('active');
-						$('.nav-menu li').eq(i).addClass('active');
-				}
-		});
-}).scroll();
+var galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 10,
+  loop: true,
+  loopedSlides: 5, //looped slides should be the same
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});

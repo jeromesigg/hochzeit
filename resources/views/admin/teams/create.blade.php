@@ -17,6 +17,10 @@
                     {!! Form::text('title', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
+                    {!! Form::label('phone', 'Telefonnummer:') !!}
+                    {!! Form::text('phone', null, ['class' => 'form-control', 'rows'=>3]) !!}
+                </div>
+                <div class="form-group">
                     {!! Form::label('description', 'Beschreibung:') !!}
                     {!! Form::textarea('description', null, ['class' => 'form-control', 'rows'=>3]) !!}
                 </div>

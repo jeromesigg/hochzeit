@@ -2,8 +2,8 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2>Fotos</h2>
+        <p>Einige Ausdrücke aus unserem gemeinsamen Leben.</p>
       </div>
 
       {{-- <div class="row portfolio-container" data-aos="fade-up"> --}}

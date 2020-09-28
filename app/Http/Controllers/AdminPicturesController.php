@@ -45,7 +45,7 @@ class AdminPicturesController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -95,7 +95,7 @@ class AdminPicturesController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -115,7 +115,10 @@ class AdminPicturesController extends Controller
     {
         //
         $picture = Picture::findOrFail($id);
-        unlink(public_path() . $picture->photo->file);
+        
+        if($picture->photo){
+            unlink(public_path() . $picture->photo->file);
+        }
 
         $picture->delete();
 

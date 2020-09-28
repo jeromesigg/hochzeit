@@ -11,7 +11,8 @@ class Team extends Model
         'name',
         'photo_id',
         'title',
-        'description'
+        'description',
+        'phone'
     ];
 
     public function photo(){

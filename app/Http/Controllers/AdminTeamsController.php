@@ -43,7 +43,7 @@ class AdminTeamsController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -92,7 +92,7 @@ class AdminTeamsController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -112,7 +112,9 @@ class AdminTeamsController extends Controller
     {
         //
         $team = Team::findOrFail($id);
-        unlink(public_path() . $team->photo->file);
+        if($team->photo){
+            unlink(public_path() . $team->photo->file);
+        }
 
         $team->delete();
 

@@ -16,7 +16,7 @@ class CreateStoriesTable extends Migration
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('year');
+            $table->integer('year')->nullable();
             $table->string('title');
             $table->text('content')->nullable();
             $table->bigInteger('photo_id')->index()->unsigned()->nullable();

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Story extends Model
@@ -12,7 +13,8 @@ class Story extends Model
         'year',
         'photo_id',
         'title',
-        'content'
+        'content',
+        'date'
     ];
 
     public function photo(){

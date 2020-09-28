@@ -36,3 +36,4 @@
     <!-- ======= Contact Section ======= -->
     @include('contents.contact')  
 @endsection
+

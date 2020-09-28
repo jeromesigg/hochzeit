@@ -46,7 +46,7 @@ class AdminShedulesController extends Controller
         $input = $request->all();
         // $input['icon'] = base64_encode($input['icon']);
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -95,7 +95,7 @@ class AdminShedulesController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -115,7 +115,9 @@ class AdminShedulesController extends Controller
     {
         //
         $shedule = Shedule::findOrFail($id);
-        unlink(public_path() . $shedule->photo->file);
+        if($shedule->photo){
+            unlink(public_path() . $shedule->photo->file);
+        }
 
         $shedule->delete();
 

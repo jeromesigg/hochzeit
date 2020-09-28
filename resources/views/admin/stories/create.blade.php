@@ -9,8 +9,8 @@
             <div class="row">
                 {!! Form::open(['method' => 'POST', 'action'=>'AdminStoriesController@store', 'files' => true]) !!}
                 <div class="form-group">
-                    {!! Form::label('year', 'Jahr:') !!}
-                    {!! Form::text('year', null, ['class' => 'form-control', 'required']) !!}
+                    {!! Form::label('date', 'Datum:') !!}
+                    {!! Form::date('date', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('title', 'Titel:') !!}

@@ -8,6 +8,7 @@
         <tr>
             <th scope="col">Photo</th>
             <th scope="col">Name</th>
+            <th scope="col">Telefon</th>
             <th scope="col">Titel</th>
             <th scope="col">Text</th>
         </tr>
@@ -18,8 +19,9 @@
             <tr>
                 <td><img height="50" src="{{$team->photo ? $team->photo->file : 'http://placehold.it/50x50'}}" alt=""></td>
                 <td><a href="{{route('teams.edit', $team->id)}}">{{$team->name}}</a></td>
+                <td>{{$team->phone}}</td>
                 <td>{{$team->title}}</td>
-                <td>{{$team->content}}</td>
+                <td>{{$team->description}}</td>
             </tr>   
         @endforeach
         @endif

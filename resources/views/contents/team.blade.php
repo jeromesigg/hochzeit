@@ -1,9 +1,9 @@
-<section id="team" class="team section section-bg">
+<section id="team" class="team section">
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Trauzeugen</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Unsere Trauzeugen helfen uns fleissig bei den Vorbereitungen und werden durch den Tag führen. Bei Fragen dürft ihr euch auch gerne bei ihnen melden.</p>
       </div>
 
       <div class="row">
@@ -13,12 +13,13 @@
             <div class="member" data-aos="fade-up">
               <div class="member-info">
                 <span>{{$team->title}}</span>
-                <h4>{{$team->name}}</h4>
+                <h4>{{$team->name}} </h4>
+                <h6> <a href="tel:{{$team->phone}}">{{$team->phone}}</a></h6>
                 <div class="social">
                   {!! $team->description !!}
                 </div>
               </div>
-              <div class="pic"><img src="{{$team->photo->file}}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{$team->photo ? $team->photo->file : 'http://placehold.it/50x50'}}" class="img-fluid" alt=""></div>
               
             </div>
           </div>    

@@ -21,8 +21,8 @@ class CreateLocationsTable extends Migration
             $table->string('description');
             $table->string('link');
             $table->string('street');
-            $table->float('lat');
-            $table->float('lng');
+            $table->float('lat', 8, 6);
+            $table->float('lng', 8, 6);
             $table->string('city');
             $table->integer('plz');
             $table->bigInteger('photo_id')->index()->unsigned()->nullable();

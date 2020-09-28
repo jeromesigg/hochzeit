@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<?php setlocale(LC_TIME, 'de_CH'); ?>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
 

@@ -43,7 +43,7 @@ class AdminStoriesController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -92,7 +92,7 @@ class AdminStoriesController extends Controller
         $input = $request->all();
 
         if($file = $request->file('photo_id')){
-            $name = time() . $file->getClientOriginalName();
+            $name = time() . str_replace(' ', '', $file->getClientOriginalName());
             $file->move('images', $name);
             $photo = Photo::create(['file'=>$name]);
             
@@ -112,7 +112,9 @@ class AdminStoriesController extends Controller
     {
         //
         $story = Story::findOrFail($id);
-        unlink(public_path() . $story->photo->file);
+        if($story->photo){
+            unlink(public_path() . $story->photo->file);
+        }
 
         $story->delete();
 

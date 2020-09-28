@@ -31,8 +31,8 @@
                             {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('body', 'Beschreibung:') !!}
-                        {!! Form::textarea('body', null, ['class' => 'form-control', 'rows'=>3]) !!}
+                        {!! Form::label('content', 'Beschreibung:') !!}
+                        {!! Form::textarea('content', null, ['class' => 'form-control', 'rows'=>3]) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::submit('Ablauf updaten', ['class' => 'btn btn-primary col-sm-6'])!!}

@@ -3,7 +3,7 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Anmeldung</h2>
-        <p> Gebt uns hier bescheid, ob ihr dabei seid oder nicht ...</p>
+        <p> Gebt uns hier bescheid, ob ihr dabei seid oder nicht.</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="200">
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
               {!! Form::label('content', 'Nachricht:') !!}
-              {!! Form::textarea('content', null, ['class' => 'form-control', 'required', 'rows'=>3, 'placeholder' => 'Zusätzliche Personen, Allergien, Sonstige Anliegen']) !!}
+              {!! Form::textarea('content', null, ['class' => 'form-control', 'required', 'rows'=>3, 'placeholder' => 'Zusätzliche Personen, Vegetarien, Allergien, Sonstige Anliegen']) !!}
             </div>
             <div class="form-group">
               {!! Form::submit('Senden', ['class' => 'btn btn-primary'])!!}
@@ -40,6 +40,17 @@
           {!! Form::close()!!}
           </form>
         </div>
+        
+        <div class="col-lg-12" style="text-align: center">
+          <h3>Hotel</h3>
+          <p>Da wir gerne bis spät in die Nacht mit euch feiern wollen, lohnt es sich ein Hotelzimmer zu buchen. Im Hotel "Zentrum Neu-Schönstatt" haben 
+            wir ein Kontigent an Zimmer für euch vorreserviert. Für die definitive Reservation seid ihr selber zuständig, ihr müsst bei der Buchung das 
+            Zauberwort "Hochzeit Stefanie und Jérôme" erwähnen. Buchungen können unter <a href="tel:+41 81 511 02 00">+41 81 511 02 00</a>. <br> Den Shuttle vom
+            und zum Hotel wird von uns organisiert.
+          </p>
+          
+        </div>
+        
       </div>
 
     </div>

@@ -3,7 +3,8 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Geschenk-Tisch</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Nach dem Hochzeit würden wir gerne unsere Hochzeits antreten. Wir würden dabei gerne eine Safari unternehmen und Stefanies Lieblingstiere in der
+          freien Wildbahn sehen. Falls ihr uns etwas schenken möchtet, würden wir uns freuen, wenn ihr etwas zu dieser Reise beiträgt.</p>
       </div>
       <div class="row">
         @foreach ($gifts as $gift)
@@ -41,7 +42,7 @@
             <div class="form-row">
               <div class="col-md-6 form-group">
                 {!! Form::label('gift_id', 'Geschenk:') !!}
-                {!! Form::select('gift_id', [''=>'Wähle GEschenk'] + $gifts_select, null, ['class' => 'form-control', 'required']) !!}
+                {!! Form::select('gift_id', [''=>'Wähle das Geschenk'] + $gifts_select, null, ['class' => 'form-control', 'required']) !!}
               </div>   
               <div class="col-md-6 form-group">
                 {!! Form::label('amount', 'Betrag:') !!}     

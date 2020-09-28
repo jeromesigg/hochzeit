@@ -85,6 +85,8 @@ class AdminLocationsController extends Controller
     public function edit($id)
     {
         //
+        $location = Location::findOrFail($id);
+        return view('admin.locations.edit', compact('location'));
     }
 
     /**
@@ -97,6 +99,29 @@ class AdminLocationsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $input = $request->all();
+        $geocode = Geocoder::getCoordinatesForAddress($input['street'] . ', ' . $input['plz'] . ' '. $input['city']);
+        $input['lat'] = $geocode['lat'];
+        $input['lng'] = $geocode['lng'];
+        
+   
+        $input['link'] = 'https://maps.google.com/?q='. $geocode['lat'] . ',' . $geocode['lng'];
+
+        $url = 'https://maps.googleapis.com/maps/api/staticmap?&center='. $geocode['lat'] . ',' . $geocode['lng'] . '&zoom=13%&size=200x200&maptype=roadmap&markers=color:red%7C';
+        $url = $url . $geocode['lat'] . ',' . $geocode['lng'] . '&key=' . env('GOOGLE_MAPS_GEOCODING_API_KEY');
+        $image = file_get_contents($url);
+        $folder = 'images/'; 
+        $name = time().str_replace(' ', '', $input['name']).'.png';
+        $path = $folder.$name;
+        Storage::disk('public')->put($path, $image);
+        $photo = Photo::create(['file'=>$name]);
+
+        
+        $input['photo_id'] = $photo->id;
+
+        Location::findOrFail($id)->update($input);
+
+        return redirect('/admin/locations');
     }
 
     /**
