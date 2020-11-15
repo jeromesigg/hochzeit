@@ -26,6 +26,10 @@
                     {!! Form::select('location_id', [''=>'Wähle Ort'] + $locations, null, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
+                    {!! Form::label('invited', 'Wer darf es sehen:') !!}
+                    {!! Form::select('invited', array(0 => "Alle Gäste", 1 => "Nur geladene Gäste"), null,  ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
                         {!! Form::label('photo_id', 'Photo:') !!}
                         {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
                 </div>

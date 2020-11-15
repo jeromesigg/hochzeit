@@ -27,8 +27,10 @@
     <!-- ======= Invitation Section ======= -->
     @include('contents.gift')  
     
-    <!-- ======= Testimonials Section ======= -->
-    @include('contents.story')  
+    @if(Auth::user()->isInvited())
+        <!-- ======= Testimonials Section ======= -->
+        @include('contents.story')  
+    @endif
     
     <!-- ======= Team Section ======= -->
     @include('contents.team')  

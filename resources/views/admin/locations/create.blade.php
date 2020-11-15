@@ -32,6 +32,10 @@
                     {!! Form::text('city', null, ['class' => 'form-control', 'required']) !!}
                 </div>
                 <div class="form-group">
+                    {!! Form::label('invited', 'Wer darf es sehen:') !!}
+                    {!! Form::select('invited', array(0 => "Alle Gäste", 1 => "Nur geladene Gäste"), null,  ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
                     {!! Form::submit('Ort Erstellen', ['class' => 'btn btn-primary'])!!}
                 </div>
                 {!! Form::close()!!}

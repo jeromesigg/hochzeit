@@ -12,7 +12,8 @@ class GuestGift extends Model
         'name',
         'content',
         'gift_id',
-        'amount'
+        'amount',
+        'email'
     ];
 
     public function gift(){

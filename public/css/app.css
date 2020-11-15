@@ -59,7 +59,7 @@
 }
 
 .locations .location-map svg .overlay {
-  fill: #B5838D;
+  fill: #3a0e17;
   fill-opacity: 0;
   transition: fill-opacity 0.5s ease-in-out;
 }
@@ -117,7 +117,7 @@
 
 .timeline::before {
   content: "";
-  background: #FFB4A2;
+  background: #6a323f;
   width: 5px;
   height: 90%;
   position: absolute;
@@ -232,14 +232,14 @@
 blockquote {
   margin-top: 30px;
   color: #757575;
-  border-left-color: #B5838D;
+  border-left-color: #3a0e17;
   padding: 0 20px;
 }
 
 .date {
-  background: #FFCDB2;
+  background: #6a323f;
   display: inline-block;
-  color: #212121;
+  color: #FFFFFF;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -282,13 +282,13 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f9fc;
+  background-color: #fff8f9;
   flex-direction: column;
 }
 
 .story {
   width: 100%;
-  background-color: #f4f9fc;
+  background-color: #fff8f9;
   height: 600px;
 }
 
@@ -342,7 +342,7 @@ blockquote {
   font-size: 42px;
   margin-bottom: 50px;
   transform: translate3d(20px, 0, 0);
-  color: #B5838D;
+  color: #3a0e17;
   font-weight: 300;
   opacity: 0;
   transition: 0.2s ease 0.4s;

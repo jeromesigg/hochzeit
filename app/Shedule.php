@@ -13,7 +13,12 @@ class Shedule extends Model
         'title',
         'content',
         'location_id',
-        'icon'
+        'icon',
+        'invited'
+    ];
+
+    protected $casts = [
+        'invited' => 'boolean'
     ];
 
     public function photo(){

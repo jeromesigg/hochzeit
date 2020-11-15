@@ -12,7 +12,8 @@ class Invitation extends Model
         'firstname',
         'email',
         'content',
-        'response_id'
+        'response_id',
+        'amount'
     ];
 
     public function response(){

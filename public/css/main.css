@@ -5247,7 +5247,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f4f9fc;
+  background-color: var(--melon);
 }
 
 .section-title {
@@ -5272,7 +5272,7 @@ section {
   transform: translate(-50%, -50%);
   width: 122px;
   height: 66px;
-  background: url(../img/section-title-bg.png) no-repeat;
+  background: url(../img/section-title-bg-red.png) no-repeat;
   z-index: -1;
 }
 
@@ -5323,7 +5323,7 @@ section {
 
 .about .content .about-btn {
   display: inline-block;
-  background: #67b0d1;
+  background: var(--lavender);
   padding: 6px 44px 8px 30px;
   color: #fff;
   border-radius: 50px;
@@ -5496,7 +5496,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(103, 176, 209, 0.8), rgba(103, 176, 209, 0.8)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(#3a0e17b0, rgba(103, 176, 209, 0.8)), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -5769,7 +5769,7 @@ section {
   display: block;
   width: 50px;
   height: 1px;
-  background: #b1cbd7;
+  background: var(--lavender);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -6255,11 +6255,11 @@ canvas{
   }
 
   :root {
-    --apricot: #FFCDB2;
-    --melon: #FFB4A2;
+    --apricot: #6a323f;
+    --melon: #fff8f9;
     --pink: #E5989B;
-    --lavender: #B5838D;
-    --oldlavender: #6D6875;
+    --lavender:#3a0e17;
+    --oldlavender: #25090f;
     --darkliver: #5B5661;
   }
 
@@ -6309,12 +6309,11 @@ canvas{
   }
   
   a:hover {
-    color: var(--darkliver);;
     text-decoration: none;
   }
 
   .cta {
-    background: linear-gradient(rgba(255,205,178, 0.8), rgba(255,205,178, 0.8)), url("../img/cta-bg.jpg") fixed center center;
+    background: linear-gradient(#3a0e17b0, #6a323f9d), url("../img/cta-bg.jpg") fixed center center;
     background-size: cover;
     padding: 60px 0;
   }

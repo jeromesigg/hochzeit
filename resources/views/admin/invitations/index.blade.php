@@ -15,9 +15,10 @@
                         <th scope="col" width="10%">Name</th>
                         <th scope="col" width="10%">Vorname</th>
                         <th scope="col" width="10%">E-Mail</th>
-                        <th scope="col" width="30%">Text</th>
-                        <th scope="col" width="30%">Antwort</th>
-                        <th scope="col" width="10%">Erstellt</th>
+                        <th scope="col" width="25%">Text</th>
+                        <th scope="col" width="15%">Antwort</th>
+                        <th scope="col" width="5%">Anzahl</th>
+                        <th scope="col" width="15%">Erstellt</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +30,7 @@
                             <td><a target="blank" href="mailto:{{$invitation->email}}">{{$invitation->email}}</a></td>
                             <td>{{$invitation->content}}</td>
                             <td>{{$invitation->response['name']}}</td>
+                            <td>{{$invitation->amount}}</td>
                             <td>{{$invitation->created_at ? $invitation->created_at->diffForHumans() : 'Kein Datum'}}</td>
                         </tr>   
                     @endforeach

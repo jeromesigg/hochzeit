@@ -8,6 +8,11 @@ class Response extends Model
 {
     //
     protected $fillable = [
-        'name'
+        'name',
+        'invited'
+    ];
+    
+    protected $casts = [
+        'invited' => 'boolean'
     ];
 }

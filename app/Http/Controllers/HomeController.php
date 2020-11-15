@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Gift;
 use App\Team;
 use App\Album;
-use App\Gift;
 use App\Story;
 use App\Picture;
 use App\Shedule;
@@ -12,6 +12,7 @@ use App\Location;
 use App\Response;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -32,14 +33,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $stories = Story::all()->sortByDesc('date');
-        $shedules = Shedule::all()->sortBy('time');
+        $user = Auth::user();
+        $stories = Story::all()->sortBy('date');
+        $shedules = Shedule::where('invited',$user->IsInvited())->orWhere('invited',false)->get()->sortBy('time');
         $pictures = Picture::paginate(6);
         // $pictures->withPath('#photos');
         $albums = Album::all();
-        $locations = Location::all()->sortBy('name');
-        $responses = Response::pluck('name','id')->all();
-        $gifts_select = Gift::pluck('name','id')->all();
+        $locations = Location::where('invited',$user->IsInvited())->orWhere('invited',false)->get()->sortBy('name');
+        $responses = Response::where('invited',$user->IsInvited())->orWhere('invited',false)->pluck('name','id')->toArray();
+        $gifts_select = Gift::where('paid', '<', 'amount')->orWhereNULL('amount')->pluck('name','id')->toArray();
         $teams = Team::all()->sortBy('name');
         $gifts = Gift::all();
         return view('home', compact('stories', 'shedules','pictures', 'albums', 'locations', 'responses', 'teams', 'gifts','gifts_select'));

@@ -17,6 +17,10 @@
                         <div class="form-group">
                             {!! Form::submit('Update Antwort', ['class' => 'btn btn-primary'])!!}
                         </div>
+                        <div class="form-group">
+                            {!! Form::label('invited', 'Wer darf es sehen:') !!}
+                            {!! Form::select('invited', array(0 => "Alle Gäste", 1 => "Nur geladene Gäste"), null,  ['class' => 'form-control']) !!}
+                        </div>
                     {!! Form::close()!!}
                     {!! Form::model($response, ['method' => 'DELETE', 'action'=>['AdminResponsesController@destroy',$response->id], 'id'=> "myForm"]) !!}
                     <div class="form-group">

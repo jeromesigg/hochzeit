@@ -47,4 +47,11 @@ class User extends Authenticatable
         }
         return false;
     }
+
+    public function isInvited(){
+        if($this->role['is_invited'] == 1){
+            return true;
+        }
+        return false;
+    }
 }

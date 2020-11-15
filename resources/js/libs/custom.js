@@ -104,7 +104,7 @@ var ringer = {
       $r.ctx.stroke();
      
       // second circle
-      $r.ctx.strokeStyle = "#B5838D";
+      $r.ctx.strokeStyle = "#3a0e17";
       $r.ctx.beginPath();
       $r.ctx.arc(0,0,$r.r_size/2,-Math.PI/2,endAngle, 1);
       $r.ctx.lineWidth =$r.r_thickness;
@@ -181,7 +181,7 @@ $(function(){
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 10,
-  slidesPerView: 5,
+  slidesPerView:  WindowSize.matches ? 2 : 5,
   loop: true,
   freeMode: true,
   loopedSlides: 5, //looped slides should be the same

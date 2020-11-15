@@ -21,6 +21,7 @@
                         <th scope="col">Strasse</th>
                         <th scope="col">PLZ</th>
                         <th scope="col">Ort</th>
+                        <th scope="col">Geladene Gäste</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,6 +35,7 @@
                                 <td>{{$location->street}}</td>
                                 <td>{{$location->plz}}</td>
                                 <td>{{$location->city}}</td>
+                                <td>{{$location->invited ? 'Ja' : 'Nein'}}</td>
                             </tr>   
                         @endforeach
                     @endif

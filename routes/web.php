@@ -44,6 +44,8 @@ Route::group(['middleware' => 'admin'], function(){
     Route::resource('admin/responses', 'AdminResponsesController');
     Route::resource('admin/teams', 'AdminTeamsController');
     Route::resource('admin/gifts', 'AdminGiftsController');
+    Route::resource('admin/users', 'AdminUsersController');
+    Route::get('admin/guestgifts', ['as'=>'guestgifts.index','uses' => 'AdminGuestGiftsController@index']);
 });
 
 Route::get('admin/run-migrations', function () {

@@ -3,7 +3,7 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Kontakt</h2>
-        <p> Schreibt uns, wenn ihr noch fragen habt.</p>
+        <p> Schreibt uns, wenn ihr noch Fragen habt.</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">

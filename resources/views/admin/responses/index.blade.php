@@ -15,6 +15,10 @@
                             {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
                         </div>
                         <div class="form-group">
+                            {!! Form::label('invited', 'Wer darf es sehen:') !!}
+                            {!! Form::select('invited', array(0 => "Alle Gäste", 1 => "Nur geladene Gäste"), null,  ['class' => 'form-control']) !!}
+                        </div>
+                        <div class="form-group">
                             {!! Form::submit('Antwort erstellen', ['class' => 'btn btn-primary'])!!}
                         </div>
                     {!! Form::close()!!}
@@ -25,12 +29,14 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Geladene Gäste</th>
                                 </tr>
                             </thead>
                         @foreach ($responses as $response)
                             <tbody>
                                 <tr>
                                     <td><a href="{{route('responses.edit',$response->id)}}">{{$response->name}}</a></td>
+                                    <td>{{$response->invited ? 'Ja' : 'Nein'}}</td>
                                 </tr>
                             </tbody>
                         @endforeach

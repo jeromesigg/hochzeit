@@ -19,6 +19,7 @@
                         <th scope="col">Titel</th>
                         <th scope="col">Text</th>
                         <th scope="col">Ort</th>
+                        <th scope="col">Geladene Gäste</th>
                         <th scope="col">Link</th>
                     </tr>
                 </thead>
@@ -31,6 +32,7 @@
                             <td><a href="{{route('shedules.edit', $shedule->id)}}">{{$shedule->title}}</a></td>
                             <td>{{$shedule->content}}</td>
                             <td>{{$shedule->location['name']}}</td>
+                            <td>{{$shedule->invited ? 'Ja' : 'Nein'}}</td>
                             <td>{{$shedule->link}}</td>
                         </tr>   
                     @endforeach

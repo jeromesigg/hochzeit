@@ -7,7 +7,7 @@
 
 	&::before {
 		content: '';
-		background: $melon;
+		background: $apricot;
 		width: 5px;
 		height: 90%;
 		position: absolute;
@@ -135,14 +135,14 @@
 blockquote {
 	margin-top: 30px;
 	color: $secondary-text;
-	border-left-color: $primary;
+	border-left-color: $lavender;
 	padding: 0 20px;
 }
 
 .date {
 	background: $apricot;
 	display: inline-block;
-	color: $primary-text;
+	color: $text;
 	padding: 10px;
 	position: absolute;
 	top: 0;
@@ -263,7 +263,7 @@ blockquote {
 		font-size: 42px;
 		margin-bottom: 50px;
 		transform: translate3d(20px, 0, 0);
-		color: $primary;
+		color: $lavender;
 		font-weight: 300;
 		opacity: 0;
 		transition: .2s ease .4s;

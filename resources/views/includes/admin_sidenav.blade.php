@@ -30,6 +30,7 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li><a href="{{route('contacts.index')}}"> <i class="fas fa-clipboard-list"></i> Anfragen</a></li>
+                <li><a href="{{route('guestgifts.index')}}"> <i class="fas fa-gifts"></i> Erhaltene Geschenke</a></li>
             </ul>
             
         </div>
@@ -104,6 +105,18 @@
                         </li>
                         <li>
                             <a href="{{route('gifts.create')}}">Geschenk erstellen</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#UsersDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-user"></i> Benutzer</a>
+                    <ul id="UsersDropdown" class="collapse list-unstyled ">
+                        <li>
+                            <a href="{{route('users.index')}}">Benutzer</a>
+                        </li>
+                        <li>
+                            <a href="{{route('users.create')}}">Benutzer erstellen</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

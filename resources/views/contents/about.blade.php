@@ -6,7 +6,7 @@
           <div class="content" style="width: 100%">
             <h3>Wir freuen uns, dass ihr mit uns diesen Tag feiert.</h3>
             <p>
-              Auf dieser Seite findet ihr alle wichtigen Informationen, Anfahrtspläne und Kontaktdaten 
+              Auf dieser Seite findet ihr alle wichtigen Informationen, Anfahrtspläne und Kontaktdaten.
             </p>
             <a href="#contact" class="about-btn">Fragen?<i class="bx bx-chevron-right"></i></a>
           </div>

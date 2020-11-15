@@ -14,10 +14,12 @@
                 <ul id="top-menu">
                 <li class="active"><a href="#header">Home</a></li>
                 <li><a href="#timeline">Zeitplan</a></li>
-                <li><a href="#locations">Orte</a></li>
                 <li><a href="#invitation">Anmeldung</a></li>
                 <li><a href="#photos">Fotos</a></li>
-                <li><a href="#story">Über uns</a></li>
+                <li><a href="#gifts">Geschenke</a></li>
+                @if(Auth::user()->isInvited())
+                    <li><a href="#story">Über uns</a></li>
+                @endif
                 <li><a href="#team">Trauzeugen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
                 @if (Auth::user()->isAdmin())
@@ -30,7 +32,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="dropdown-item" style="color:black;" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}

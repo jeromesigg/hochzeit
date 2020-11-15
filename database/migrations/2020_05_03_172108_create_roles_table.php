@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateRolesTable extends Migration
 {
@@ -22,8 +23,8 @@ class CreateRolesTable extends Migration
         // Insert some stuff
         DB::table('roles')->insert(
            array(
-               ['id' => config('role_Administrator'), 'name' => 'Administrator', 'is_admin' => true],
-               ['id' => config('role_Gast'), 'name' => 'Gast', 'is_admin' => false]
+               ['id' => config('status.role_Administrator'), 'name' => 'Administrator', 'is_admin' => true],
+               ['id' => config('status.role_Freunde'), 'name' => 'Freunde', 'is_admin' => false]
            )
        );
     }

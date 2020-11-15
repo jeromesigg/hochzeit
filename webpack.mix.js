@@ -53,6 +53,7 @@ mix.styles([
     'resources/css/admin/fontastic.css',
     'resources/css/admin/jquery.mCustomScrollbar.css',
     'resources/css/admin/style.default.premium.css',
+    'resources/css/libs/custom.css',
 ], 'public/css/admin.css');
 mix.scripts([
  'resources/js/libs/jquery.min.js',

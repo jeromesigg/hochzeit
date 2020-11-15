@@ -31,7 +31,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 text-right">
-                            <p>Design by Jerome, V0</a></p>
+                            <p>Design by Jerome, V1</a></p>
                         </div>
                     </div>
                 </div>

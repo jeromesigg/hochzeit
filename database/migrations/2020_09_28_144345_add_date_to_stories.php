@@ -15,7 +15,7 @@ class AddDateToStories extends Migration
     {
         Schema::table('stories', function (Blueprint $table) {
             //
-            $table->date('date', 0)->nullable;
+            $table->date('date', 0)->nullable();
         });
     }
 
