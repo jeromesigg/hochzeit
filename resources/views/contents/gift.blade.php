@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         @foreach ($gifts as $gift)
-          <div class="col-md-4">
+          <div class="col-xs-6 col-md-4">
           <div class="card card-inverse"><img src="{{$gift->photo->file}}" alt="Card image" class="card-img img-fluid">
               <div class="card-img-overlay card-img-overlay-opacity">
                 <h5 class="card-title">{{$gift->name}}</h5>
