@@ -18,7 +18,7 @@ class CreateGiftsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('subline');
-            $table->string('description');
+            $table->text('description');
             $table->bigInteger('photo_id')->index()->unsigned()->nullable();
             $table->foreign('photo_id')->references('id')->on('photos');
             $table->integer('amount');

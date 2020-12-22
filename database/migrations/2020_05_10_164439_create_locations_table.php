@@ -18,7 +18,7 @@ class CreateLocationsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('subline');
-            $table->string('description');
+            $table->text('description');
             $table->string('link');
             $table->string('street');
             $table->float('lat', 8, 6);

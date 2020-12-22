@@ -19,8 +19,8 @@
               @if($gift['amount'])
                 <div class="card-body">
                   <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{$gift->paid}}" aria-valuemin="0" aria-valuemax="{{$gift->amount}}" style="width: {{$gift->paid/$gift->amount*100}}%">{{round($gift->paid)}}.- von {{round($gift->amount)}}.-</div>
-                  </div></p>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{$gift->paid}}" aria-valuemin="0" aria-valuemax="{{$gift->amount}}" style="width: {{$gift->paid/$gift->amount*100}}%">{{$gift->paid/$gift->amount*100}}%</div>
+                  </div>
                 </div>
               @endif
             </div>
