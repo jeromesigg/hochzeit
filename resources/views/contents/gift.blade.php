@@ -3,8 +3,9 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Geschenk-Tisch</h2>
-        <p>Nach der Hochzeit würden wir gerne unsere Hochzeitsreise antreten. Wir würden dabei gerne eine Safari unternehmen und Stefanies Lieblingstiere in der
-          freien Wildbahn sehen. Falls ihr uns etwas schenken möchtet, würden wir uns freuen, wenn ihr etwas zu dieser Reise beiträgt.</p>
+        <p>Nach der Hochzeit gehen wir auch schon bald auf unsere Hochzeitsreise. Dabei werden wir eine Safari unternehmen und Stefanies Lieblingstiere in der
+          freien Wildbahn sehen und anschliessend noch eine Woche am Meer verbringen. <br>
+          Falls ihr uns etwas schenken möchtet, würden wir uns freuen, wenn ihr etwas zu dieser Reise beiträgt.</p>
       </div>
       <div class="row">
         @foreach ($gifts as $gift)
