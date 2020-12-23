@@ -41,6 +41,7 @@ class AdminGiftsController extends Controller
     {
         //
         $input = $request->all();
+        $input['paid'] = 0;
 
         if($file = $request->file('photo_id')){
             $name = time() . str_replace(' ', '', $file->getClientOriginalName());

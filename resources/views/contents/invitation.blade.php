@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
               {!! Form::label('content', 'Nachricht:') !!}
-              {!! Form::textarea('content', null, ['class' => 'form-control', 'required', 'rows'=>3, 'placeholder' => 'Zusätzliche Personen, Vegetarier, Allergien, Sonstige Anliegen']) !!}
+              {!! Form::textarea('content', null, ['class' => 'form-control', 'rows'=>3, 'placeholder' => 'Zusätzliche Personen, Vegetarier, Allergien, Sonstige Anliegen']) !!}
             </div>
             <div class="form-group">
               {!! Form::submit('Senden', ['class' => 'btn btn-primary'])!!}

@@ -19,7 +19,7 @@ class CreateInvitationsTable extends Migration
             $table->string('firstname'); 
             $table->string('name'); 
             $table->string('email'); 
-            $table->text('content'); 
+            $table->text('content')->nullable(); 
             $table->bigInteger('response_id')->index()->unsigned()->nullable();
         });
     }

@@ -41,7 +41,7 @@ class HomeController extends Controller
         $albums = Album::all();
         $locations = Location::where('invited',$user->IsInvited())->orWhere('invited',false)->get()->sortBy('name');
         $responses = Response::where('invited',$user->IsInvited())->orWhere('invited',false)->pluck('name','id')->toArray();
-        $gifts_select = Gift::where('paid', '<', 'amount')->orWhereNULL('amount')->pluck('name','id')->toArray();
+        $gifts_select = Gift::whereColumn('paid', '<', 'amount')->orWhereNULL('amount')->pluck('name','id')->toArray();
         $teams = Team::all()->sortBy('name');
         $gifts = Gift::all();
         return view('home', compact('stories', 'shedules','pictures', 'albums', 'locations', 'responses', 'teams', 'gifts','gifts_select'));

@@ -51,3 +51,7 @@ Route::group(['middleware' => 'admin'], function(){
 Route::get('admin/run-migrations', function () {
     return Artisan::call('migrate', ["--force" => true ]);
 });
+
+Route::get('admin/config-cache', function () {
+    return Artisan::call('config:cache');
+});
