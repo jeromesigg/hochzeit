@@ -14,7 +14,7 @@
               <div class="card-img-overlay card-img-overlay-opacity">
                 <h5 class="card-title">{{$gift->name}}</h5>
                 <p class="card-text">{!! $gift->description !!}</p>
-                <p class="card-text"><small>{{$gift->subline}}</small></p>
+                {{-- <p class="card-text"><small>{{$gift->subline}}</small></p> --}}
               </div>
               @if($gift['amount'])
                 <div class="card-body">

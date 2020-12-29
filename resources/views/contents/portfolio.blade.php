@@ -3,7 +3,8 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Fotos</h2>
-        <p>Einige Ausdrücke aus unserem gemeinsamen Leben.</p>
+        <p>Einige Ausdrücke aus unserem gemeinsamen Leben. </p>
+          <p>Falls die Bilder nicht richtig angezeigt werden, einfach die Seite neuladen</p>
       </div>
 
       {{-- <div class="row portfolio-container" data-aos="fade-up"> --}}
@@ -13,7 +14,7 @@
                 <div class="portfolio-wrap">
                     <img src="{{$picture->photo->file}}" class="img-fluid" alt="">
                     <div class="portfolio-links">
-                        <a href="{{$picture->photo->file}}" data-gall="portfolioGallery" class="venobox" title="{{$picture->name}}"><i class="bx bx-plus"></i></a>
+                        <a href="{{$picture->photo->file}}" data-gall="portfolioGallery" class="venobox" title=""><i class="bx bx-plus"></i></a>
                     </div>
                 </div>
             </div>   
