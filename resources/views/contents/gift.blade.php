@@ -45,7 +45,7 @@
             <div class="form-row">
               <div class="col-md-6 form-group">
                 {!! Form::label('email', 'E-Mail:') !!}
-                {!! Form::text('email', null, ['class' => 'form-control', 'required', 'email']) !!}
+                {!! Form::email('email', null, ['class' => 'form-control', 'required', 'email']) !!}
               </div>
               <div class="col-md-4 form-group">
                 {!! Form::label('gift_id', 'Geschenk:') !!}

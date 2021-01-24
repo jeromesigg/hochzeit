@@ -16,7 +16,7 @@
           <div class="timeline-img-header" style="background-image: url({{$shedule->photo ? $shedule->photo->file : 'http://placehold.it/600x400'}})">
             
          
-          <div class="date">{{$shedule->time}}</div>
+          <div class="date">{{date("H:i", strtotime($shedule->time))}}</div>
           <div class="timeline-text">
             <h2>{{$shedule->title}}</h2>
             <p>{!! $shedule->content !!}</p>

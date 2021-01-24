@@ -20,18 +20,18 @@
               </div>
               
             </div>
-              <div class="form-row">
-                <div class="col-md-2 form-group">
-                  {!! Form::label('amount', 'Anzahl:') !!}
-                  {!! Form::text('amount', null, ['class' => 'form-control', 'required']) !!}
-                </div>   
-                <div class="col-md-4 form-group">
-                  {!! Form::label('email', 'E-Mail:') !!}
-                  {!! Form::email('email', null, ['class' => 'form-control', 'required', 'email']) !!}
-                </div>   
-                <div class="col-md-6 form-group">
-                  {!! Form::label('response_id', 'Antwort:') !!}
-                  {!! Form::select('response_id', [''=>'Wähle Antwort'] + $responses, null, ['class' => 'form-control', 'required']) !!}
+            <div class="form-row">
+              <div class="col-md-2 form-group">
+                {!! Form::label('amount', 'Anzahl:') !!}
+                {!! Form::text('amount', null, ['class' => 'form-control', 'required']) !!}
+              </div>   
+              <div class="col-md-4 form-group">
+                {!! Form::label('email', 'E-Mail:') !!}
+                {!! Form::email('email', null, ['class' => 'form-control', 'required', 'email']) !!}
+              </div>   
+              <div class="col-md-6 form-group">
+                {!! Form::label('response_id', 'Antwort:') !!}
+                {!! Form::select('response_id', [''=>'Wähle Antwort'] + $responses, null, ['class' => 'form-control', 'required']) !!}
               </div>     
             </div>
             <div class="form-group">

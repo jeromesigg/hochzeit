@@ -23,11 +23,11 @@
                 <td>{{$email}}</td>
             </tr>
             <tr>
-                <th scope="row" style="text-align:left">Antwort</th>
+                <th scope="row" style="text-align:left">Geschenk</th>
                 <td>{{$gift}}</td>
             </tr>
             <tr>
-                <th scope="row" style="text-align:left">Anzahl Personen</th>
+                <th scope="row" style="text-align:left">Betrag</th>
                 <td>{{$amount}}</td>
             </tr>
             <tr>
